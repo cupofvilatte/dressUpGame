@@ -1,6 +1,8 @@
 import pygame
 import sys
 
+# music used created thanks to Denys Brodovskyi
+
 # initialize game
 pygame.init()
 
@@ -48,6 +50,13 @@ pants_rect = pants.get_rect(topleft=(50, 150))
 shoes = pygame.image.load("../assets/images/shoes1.png")
 shoes = pygame.transform.scale(shoes, (180, 150))
 shoes_rect = shoes.get_rect(topleft=(50, 300))
+
+# background music
+pygame.mixer.music.load("../assets/sounds/tell-me-the-truth-260010.mp3")
+# set play volume
+pygame.mixer.music.set_volume(0.5)
+# set to repeat constantly
+pygame.mixer.music.play(-1)
 
 # set up drag and drop
 dragging_item = None
